@@ -6,10 +6,12 @@ import {
   input
 } from '../src/day_01/inputs';
 
-test('Day 1', t => {
-  t.is(increases(sample), 7, 'Part A sample');
-  t.is(increases(input), 1301, 'Part A');
+test('Part A', t => {
+  t.is(increases(sample), 7, 'sample');
+  t.is(increases(input), 1301, 'input');
+});
 
-  t.is(windowIncreases(sample), 5, 'Part B sample');
-  t.is(windowIncreases(input), 1346, 'Part B');
+test('Part B', t => {
+  t.is(windowIncreases(sample), 5, 'sample');
+  t.is(windowIncreases(input), 1346, 'input');
 });
