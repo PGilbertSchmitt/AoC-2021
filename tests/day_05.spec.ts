@@ -10,5 +10,5 @@ test('Part A', t => {
 
 test('Part B', t => {
   t.is(findAllVentCollisions(sample), 12, 'sample');
-  t.is(findAllVentCollisions(input), 69, 'input');
+  t.is(findAllVentCollisions(input), 20500, 'input');
 })
