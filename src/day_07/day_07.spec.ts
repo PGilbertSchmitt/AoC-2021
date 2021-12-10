@@ -1,7 +1,7 @@
 import test from 'ava';
-import { input, sample } from '../src/day_07/inputs';
-import { getCheapestCost as getCheapestCostSimple } from '../src/day_07/part_a';
-import { getCheapestCost } from '../src/day_07/part_b';
+import { input, sample } from './inputs';
+import { getCheapestCost as getCheapestCostSimple } from './part_a';
+import { getCheapestCost } from './part_b';
 
 test('Part A', t => {
   t.is(getCheapestCostSimple(sample), 37, 'sample');

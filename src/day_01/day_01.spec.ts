@@ -1,10 +1,10 @@
 import test from 'ava';
-import { increases } from '../src/day_01/part_a';
-import { windowIncreases } from '../src/day_01/part_b';
+import { increases } from './part_a';
+import { windowIncreases } from './part_b';
 import {
   sample,
   input
-} from '../src/day_01/inputs';
+} from './inputs';
 
 test('Part A', t => {
   t.is(increases(sample), 7, 'sample');

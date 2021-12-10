@@ -1,7 +1,7 @@
 import test from 'ava';
-import { sample, input } from '../src/day_03/inputs';
-import { buildProduct } from '../src/day_03/part_a';
-import { getRatings } from '../src/day_03/part_b';
+import { sample, input } from './inputs';
+import { buildProduct } from './part_a';
+import { getRatings } from './part_b';
 
 test('Part A', t => {
   t.is(buildProduct(sample), 198, 'sample');

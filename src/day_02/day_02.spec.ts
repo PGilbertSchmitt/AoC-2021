@@ -1,7 +1,7 @@
 import test from 'ava';
-import { getDistanceProduct } from '../src/day_02/part_a';
-import { getAimProduct } from '../src/day_02/part_b';
-import { sample, input } from '../src/day_02/inputs';
+import { getDistanceProduct } from './part_a';
+import { getAimProduct } from './part_b';
+import { sample, input } from './inputs';
 
 test('Part A', t => {
   t.is(getDistanceProduct(sample), 150, 'sample');

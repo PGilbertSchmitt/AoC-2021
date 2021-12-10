@@ -1,7 +1,7 @@
 import test from 'ava';
-import { input, sample } from '../src/day_08/inputs';
-import { uniqueSegmentCounts } from '../src/day_08/part_a';
-import { sumOfSegmentDisplays } from '../src/day_08/part_b';
+import { input, sample } from './inputs';
+import { uniqueSegmentCounts } from './part_a';
+import { sumOfSegmentDisplays } from './part_b';
 
 test('Part A', t => {
   t.is(uniqueSegmentCounts(sample), 26, 'sample');

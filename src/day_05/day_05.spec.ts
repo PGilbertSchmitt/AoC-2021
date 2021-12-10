@@ -1,7 +1,7 @@
 import test from 'ava';
-import { input, sample } from '../src/day_05/inputs';
-import { findVentCollisions } from '../src/day_05/part_a';
-import { findVentCollisions as findAllVentCollisions } from '../src/day_05/part_b';
+import { input, sample } from './inputs';
+import { findVentCollisions } from './part_a';
+import { findVentCollisions as findAllVentCollisions } from './part_b';
 
 test('Part A', t => {
   t.is(findVentCollisions(sample), 5, 'sample');

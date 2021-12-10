@@ -1,7 +1,7 @@
 import test from 'ava';
-import { sample, input } from '../src/day_04/inputs';
-import { winBingo } from '../src/day_04/part_a';
-import { loseBingo } from '../src/day_04/part_b';
+import { sample, input } from './inputs';
+import { winBingo } from './part_a';
+import { loseBingo } from './part_b';
 
 test('Part A', t => {
   t.is(winBingo(sample), 4512, 'sample');

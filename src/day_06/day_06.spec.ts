@@ -1,6 +1,6 @@
 import test from 'ava';
-import { sample, input } from '../src/day_06/inputs';
-import { simulateFish } from '../src/day_06/sharedSolution';
+import { sample, input } from './inputs';
+import { simulateFish } from './sharedSolution';
 
 test('Part A', t => {
   t.is(simulateFish(sample, 18), 26, 'pre-sample');
