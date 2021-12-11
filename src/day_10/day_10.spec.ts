@@ -10,5 +10,5 @@ test('Part A', t => {
 
 test('Part B', t => {
   t.is(autocompleteScore(sample), 288957, 'sample');
-  t.is(autocompleteScore(input), 69, 'input');
+  t.is(autocompleteScore(input), 3260812321, 'input');
 });

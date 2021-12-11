@@ -10,5 +10,5 @@ test('Part A', t => {
 
 test('Part B', t => {
   t.is(firstSimultaneousFlash(sample), 195, 'sample');
-  t.is(firstSimultaneousFlash(input), 0, 'input');
+  t.is(firstSimultaneousFlash(input), 344, 'input');
 });
