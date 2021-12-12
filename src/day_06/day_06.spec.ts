@@ -1,6 +1,6 @@
 import test from 'ava';
 import { sample, input } from './inputs';
-import { simulateFish } from './sharedSolution';
+import { simulateFish } from './shared_solution';
 
 test('Part A', t => {
   t.is(simulateFish(sample, 18), 26, 'pre-sample');
