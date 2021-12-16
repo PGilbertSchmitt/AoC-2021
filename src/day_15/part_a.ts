@@ -48,11 +48,7 @@ export const cheapestPath = (input: Grid): number => {
   const workQueue: Queue<Work> = new Queue();
   workQueue.push([[0, 0], 0]);
 
-  // let iter = 0;
   while (workQueue.size() > 0) {
-    // if (iter++ % 10000 === 0) {
-    //   console.log(`[${iter}] ${workQueue.size()}`);
-    // }
     const nextWork = workQueue.pop()!;
     workQueue.push(...expand(input, costMap, ...nextWork));
   }

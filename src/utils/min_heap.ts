@@ -23,12 +23,7 @@ export class MinHeap<T> {
     const head = this.heap[0];
     this.heap[0] = this.heap[this.size - 1];
     this.size--;
-    try {
-      this.heapifyDown();
-    } catch (e) {
-      console.log(e);
-      throw e;
-    }
+    this.heapifyDown();
     return head.item;
   };
 

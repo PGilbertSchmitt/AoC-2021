@@ -11,7 +11,10 @@ test('Part A', t => {
   t.is(findShortestPathCost(input), 748, 'input with part 2\'s solution');
 });
 
-test('Part B', t => {
+// Skipping for now
+// The answer is correct, but the input solution takes between 1 and 2 minutes to run,
+// which sucks
+test.skip('Part B', t => {
   const newSample = expandInput(sample);
   t.is(findShortestPathCost(newSample), 315, 'sample');
 
