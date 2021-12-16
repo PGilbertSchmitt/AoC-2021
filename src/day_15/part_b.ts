@@ -1,4 +1,5 @@
-import { isNil } from 'ramda';
+import { performance } from 'perf_hooks';
+import { isNil, sum } from 'ramda';
 import { MinHeap } from '../utils/min_heap';
 import { Grid } from "./inputs";
 
@@ -31,6 +32,8 @@ const aStar = (end: Coor, grid: Grid): number => {
     priority: number,
     lastCoordinate: Coor | null
   }>();
+  const d1: number[] = [];
+  const d2: number[] = [];
 
   // The first coordinate [0,0] has a key of 0 and a priority of 0
   priorityQueue.push(0, [0, 0]);
@@ -45,18 +48,23 @@ const aStar = (end: Coor, grid: Grid): number => {
     const currentNodeKey = coorToKey(currentCoor);
     const currentNode = nodeMap.get(currentNodeKey)!; // Guaranteed to be here (probably)
     if (currentNodeKey === endKey) {
+      console.log(`D1: ${sum(d1) / d1.length}ms average`);
+      console.log(`D2: ${sum(d2) / d2.length}ms average`);
       return currentNode.minCost;
     }
     if (explored.has(currentNodeKey)) { continue; }
-  
+    
     const nextNodes = neighbors(currentCoor)
     for (const nodeCoor of nextNodes) {
+      const t0 = performance.now();
       const [x, y] = nodeCoor;
       const nodeKey = coorToKey(nodeCoor);
-
+      
       if (!isNil(grid[x] && grid[x][y]) && !explored.has(nodeKey)) {
+        const t1 = performance.now();
         const nextNode = nodeMap.get(nodeKey);
         const nodeCost = currentNode.minCost + grid[x][y];
+        const t2 = performance.now();
         if (nodeCost < (nextNode?.minCost || Infinity)) {
           const priority = nodeCost + heuristic(nodeCoor);
           nodeMap.set(nodeKey, {
@@ -66,8 +74,11 @@ const aStar = (end: Coor, grid: Grid): number => {
           });
           priorityQueue.push(priority, nodeCoor);
         }
+        d1.push(t1 - t0);
+        d2.push(t2 - t1);
       }
     }
+
 
     explored.add(currentNodeKey)
   }
