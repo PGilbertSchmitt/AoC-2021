@@ -9,5 +9,5 @@ test('Part A', t => {
 
 test('Part B', t => {
   t.is(litPixelCount(sample, 50), 3351, 'sample');
-  t.is(litPixelCount(input, 50), 3351, 'input');
+  t.is(litPixelCount(input, 50), 15714, 'input');
 });
