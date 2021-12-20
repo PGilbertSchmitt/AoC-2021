@@ -1,4 +1,3 @@
-import {  } from 'ramda';
 import { Input } from './input';
 import { Branch, parse, reduceTree } from './mathTree';
 import { magnitude } from './part_a';
